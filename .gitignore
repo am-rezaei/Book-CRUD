@@ -1,0 +1,5 @@
+books-backend/node_modules 
+books-backend/.env
+
+books-frontend/node_modules
+books-frontend/.idea
