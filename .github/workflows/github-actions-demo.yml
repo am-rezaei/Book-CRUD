@@ -11,8 +11,6 @@ jobs:
         with:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           known_hosts: unnecessary
-      - name: Print variables
-        run: echo ${{ secrets.SSH_HOST }}
       - name: Adding Known Hosts
         run: ssh-keyscan -p 22 -H ${{ secrets.SSH_HOST }}  >> ~/.ssh/known_hosts
 
