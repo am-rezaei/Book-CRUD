@@ -15,4 +15,4 @@ jobs:
         run: printf "${{ secrets.SSH_HOST }}" > ~/.ssh/known_hosts
 
       - name: Deploy with rsync
-        run: ssh ${{ secrets.SSH_HOST }} 
+        run: ssh 3.95.15.232
