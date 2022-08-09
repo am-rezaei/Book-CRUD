@@ -12,7 +12,7 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           known_hosts: unnecessary
       - name: Adding Known Hosts
-        run: printf ${{ secrets.SSH_HOST }} > ~/.ssh/known_hosts
+        run: printf "Hello\nWorld\n" > hw.txt
 
       - name: Deploy with rsync
         run: rsync -avz -e "ssh -p ${{ secrets.SSH_PORT }}" ./dist/ ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/zellwk.com/
