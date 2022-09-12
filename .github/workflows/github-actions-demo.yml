@@ -8,4 +8,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '14'
-      - run: curl -X GET "https://example.com/api/v2/${{ github.repository }} "
+      - run: curl -X GET "https://example.com/api/GITHUB_SHA/${{ github.repository }} "
+      
+      
+      - run: curl -X GET "https://api.github.com/repos/$GITHUB_REPOSITORY_OWNER/${{ github.repository }}/commits/$GITHUB_SHA/statuses
