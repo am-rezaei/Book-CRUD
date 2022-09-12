@@ -8,4 +8,4 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '14'
-      - run: curl -X GET "https://example.com/api/v2/endpoint"
+      - run: curl -X GET "https://example.com/api/v2/${{ github.repository }} "
