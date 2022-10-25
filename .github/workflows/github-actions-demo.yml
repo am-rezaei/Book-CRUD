@@ -8,4 +8,4 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '14'
-      - run: curl -X GET "https://qmag.sbquantum.com//run-integration-tests?owner=${{ github.repository_owner }}&repo=${{ github.event.repository.name }}&commit_sha=${{ github.sha }}"
+      - run: curl -X GET "https://qmag.sbquantum.com/run-integration-tests?owner=${{ github.repository_owner }}&repo=${{ github.event.repository.name }}&commit_sha=${{ github.sha }}"
