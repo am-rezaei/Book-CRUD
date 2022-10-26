@@ -9,4 +9,4 @@ jobs:
         with:
           node-version: '14'
       - run: |
-             curl  --header "X-API-KEY: fe17ac1718f880be029ef3b4c41fbe96247b2cb3302455e24f12541dd0daaade" "https://qmag.sbquantum.com/run-integration-tests?owner=${{ github.repository_owner }}&repo=${{ github.event.repository.name }}&commit_sha=${{ github.sha }}" 
+             curl  --header "X-API-KEY: ${{ secrets.QMAG_API_KEY }}" "https://qmag.sbquantum.com/run-integration-tests?owner=${{ github.repository_owner }}&repo=${{ github.event.repository.name }}&commit_sha=${{ github.sha }}&githubToken=${{ secrets.KEY_GITHUB }}" 
