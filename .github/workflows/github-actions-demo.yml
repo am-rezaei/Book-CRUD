@@ -10,3 +10,5 @@ jobs:
           node-version: '14'
       - run: |
              curl  --header "X-API-KEY: ${{ secrets.QMAG_API_KEY }}" "https://qmag.sbquantum.com/run-integration-tests?owner=${{ github.repository_owner }}&repo=${{ github.event.repository.name }}&commit_sha=${{ github.sha }}&github_token=${{ secrets.KEY_GITHUB }}" 
+      - name: docker
+        run: docker build . -t rwras
